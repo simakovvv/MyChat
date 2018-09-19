@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Server.Hibernate.UseridEntity" table="userid" schema="mysql">
+        <id name="id">
+            <column name="ID" sql-type="int(11)"/>
+        </id>
+        <property name="name">
+            <column name="Name" sql-type="varchar(40)" length="40" not-null="true"/>
+        </property>
+        <property name="password">
+            <column name="Password" sql-type="varchar(40)" length="40" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="Email" sql-type="varchar(40)" length="40" not-null="true"/>
+        </property>
+        <property name="timeOfStartSession">
+            <column name="timeOfStartSession" sql-type="varchar(40)" length="40" not-null="true"/>
+        </property>
+        <property name="register">
+            <column name="register" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+        <property name="isValid">
+            <column name="isValid" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+        <property name="isOnline">
+            <column name="isOnline" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
