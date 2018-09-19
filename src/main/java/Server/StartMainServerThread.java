@@ -9,7 +9,7 @@ import java.util.Set;
 
 import static Server.MainServer.controllerServer;
 
-public class StartServer extends Thread  implements Runnable {
+public class StartMainServerThread extends Thread  implements Runnable {
 
 // Этот метод выполняется в параллельном потоке и всё время слушает новые подлючения.
 //Если слышит, создаёт поток - демон

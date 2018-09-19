@@ -3,7 +3,6 @@ package Client;
 
 import javafx.application.Platform;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -35,7 +34,7 @@ public class Client extends Thread {
     public void run() {
 
 
-        Stage stage = new MainClient().getStage();
+       // Stage stage = new MainClient().getStage();
 
         Socket socket = null;
 
@@ -100,11 +99,13 @@ public class Client extends Thread {
                     // Обработка ввода пользователя
                     //line = keyboard.readLine();
 
-                    if(!controllerClient.getStack().empty()) {
 
-                        msg = controllerClient.getStack().pop();
+                    if(!controllerClient.getClientStack().empty()) {
+
+                        msg = controllerClient.getClientStack().pop();
                         oos.writeObject(msg);
                         oos.flush();
+                    }
                         try {
                             msg = oin.readObject();
                         } catch (ClassNotFoundException e) {
@@ -112,10 +113,12 @@ public class Client extends Thread {
                         }
 
                         if(msg instanceof ClientModel){
+                            // В  этом месте отлавливаем пользователей на авторизацию
                             if(((ClientModel) msg).getValid() && !((ClientModel) msg).getRegister()){
                                 controllerClient.getThisUser().setValid(true);
                                 controllerClient.setText("Server " + controllerClient.Time() +"Login successful\n");
                             }
+                            //В этом на регистрацию
                             if(((ClientModel) msg).getValid() && ((ClientModel) msg).getRegister()){
                                 controllerClient.getThisUser().setValid(true);
                                 controllerClient.setText("Server " + controllerClient.Time() +"Registration successful\n");
@@ -125,9 +128,9 @@ public class Client extends Thread {
                         if (msg instanceof String) {
                             //смотрим, сообщения, если они строковые
                             line = (String) msg;
-                        /*out.writeUTF(line);// отсылаем строку серверу
+                        out.writeUTF(line);// отсылаем строку серверу
                         out.flush(); // завершаем поток
-                        line = in.readUTF();// Ждём ответ от сервера*/
+                        line = in.readUTF();// Ждём ответ от сервера
 
                             if (line.endsWith("quit")) {
                                 Platform.exit();
@@ -140,7 +143,7 @@ public class Client extends Thread {
                         }
 
 
-                    }
+
                 }
 
             } catch (UnknownHostException e) {

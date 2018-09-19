@@ -2,9 +2,6 @@ package Client;
 
 
 
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -18,7 +15,6 @@ import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-import javax.swing.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -67,7 +63,7 @@ public class ControllerClient {
 
 
 
-    private Stack stack = new Stack();
+    private Stack clientStack = new Stack();
 
     private List<Tab> tabList = new ArrayList<Tab>();
 
@@ -83,8 +79,8 @@ public class ControllerClient {
         this.thisUser = thisUser;
     }
 
-    public Stack getStack(){
-        return stack;
+    public Stack getClientStack(){
+        return clientStack;
     }
 
     public void setText(String data){
@@ -193,7 +189,7 @@ public class ControllerClient {
                     + ": " + clientInput.getText() + "\n");
 
 
-            stack.push(clientInput.getText());//добавление команды в очередь отправки
+            clientStack.push(clientInput.getText());//добавление команды в очередь отправки
 
 
         } else {
@@ -242,14 +238,14 @@ public class ControllerClient {
             sysMsg.setText("Password is too large.");
         }else if(clientNameField.getText().isEmpty() && clientPswdField.getText().isEmpty() && emailField.getText().isEmpty() && label.getText().equals("Register as:")) {
             sysMsg.setText("Name, Password and E-mail is empty.");
-        } else if(emailField.getText().isEmpty() && label.getText().equals("Register as:")) {
+        } else /*if(emailField.getText().isEmpty() && label.getText().equals("Register as:")) {
             sysMsg.setText("E-mail is empty.");
         } else if(emailField.getText().length() > 40 && label.getText().equals("Register as:")) {
             sysMsg.setText("E-mail is too large.");
-        }else if(true) {
+        }else */if(true) {
 
             //отправили на проверку профиль, созданный в начале метода
-            stack.push(thisUser);
+            clientStack.push(thisUser);
 
             try {
                 Client client = new Client();

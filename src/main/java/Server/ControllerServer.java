@@ -11,6 +11,7 @@ import javafx.scene.input.KeyEvent;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Stack;
 
 public class ControllerServer  {
 
@@ -21,13 +22,11 @@ public class ControllerServer  {
     private TextArea serverOutput;
 
     @FXML
-    private TextField clientInput;
+    private TextField serverInput;
 
     @FXML
     private Button sendButton;
 
-    @FXML
-    private Button startServer;
 
     @FXML
     private Tab serverPageFlag;
@@ -37,6 +36,11 @@ public class ControllerServer  {
     public ControllerServer() {
     }
 
+    private Stack serverStack = new Stack();
+
+    public Stack getServerStack(){
+        return serverStack;
+    }
 
 
     public void setText(String data){
@@ -48,10 +52,9 @@ public class ControllerServer  {
     public void startServer() {
 
 
-        StartServer startServerThread = new StartServer();
+        StartMainServerThread startServerThread = new StartMainServerThread();
         Thread serverThread = new Thread(startServerThread);
         serverThread.start();
-
         serverOutput.setVisible(true);
 
     }
@@ -68,28 +71,31 @@ public class ControllerServer  {
 
 
 
-   /* @FXML
+    @FXML
     private void onActionButton(ActionEvent event) {
 
-        if(!clientInput.getText().isEmpty()) {//если поле ввода не пустое
-            clientOutput.appendText(clientPageFlag.getText() + " [" + Time()
-                    + "]" + " : " + clientInput.getText() + "\n");
+        if(!serverInput.getText().isEmpty()) {//если поле ввода не пустое
+            serverOutput.appendText(serverPageFlag.getText() +  Time()
+                    + " : " + serverInput.getText() + "\n");
+
+
+            serverStack.push(serverInput.getText());
+
         } else {
-            clientOutput.appendText("Enter the command\n");
+            serverOutput.appendText("Enter the command\n");
         }
-        clientInput.setText("");
+        serverInput.setText("");
 
-        clientInput.clear();
+        serverInput.clear();
 
-    }*/
+    }
 
 
-    /*@FXML
+    @FXML
     public void textAction(KeyEvent e) {// Отправка по нажатию Enter
 
         if (e.getCode().equals(KeyCode.ENTER))
             onActionButton(new ActionEvent());
 
     }
-*/
 }

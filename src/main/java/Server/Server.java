@@ -7,6 +7,8 @@ import Server.Hibernate.Services.UserService;
 
 import java.io.*;
 import java.net.*;
+
+
 import static Server.MainServer.controllerServer;
 
 public class Server extends Thread {
@@ -17,6 +19,7 @@ public class Server extends Thread {
 
     private Socket socket;
     private int num;
+    //переменная для хранения данных логинящихся пользователей
     private UserService checkUser = new UserService();
 
 
@@ -29,7 +32,7 @@ public class Server extends Thread {
 
 
     public void setSocket(int num, Socket socket){
-        // определение значений
+        // определение значений номера соединения и сокета
         this.num = num;
         this.socket = socket;
 
@@ -64,12 +67,21 @@ public class Server extends Thread {
 
             while(true){
                 //line = dis.readUTF();
-                try {
-                    msg = oin.readObject();
-                    System.out.println(msg.toString());
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
+                if (!controllerServer.getServerStack().isEmpty()){
+
+                    System.out.println("send msg");
+                    msg = controllerServer.getServerStack().pop();
+                    oos.writeObject(msg);
+                    oos.flush();
+                } else {
+                    try {
+                        msg = oin.readObject();
+
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                    }
                 }
+
 
                 if(msg instanceof ClientModel){
 
