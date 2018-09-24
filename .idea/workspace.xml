@@ -4,23 +4,23 @@
     <list default="true" id="1522b211-ad16-4bfa-8951-352384dec36a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Client/ClientModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserModels/ClientModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Client/ControllerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/ControllerClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Client/MainClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/MainClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server/ClientStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserModels/ClientStreams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server/ControllerServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/ControllerServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Hibernate/AppMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Hibernate/DAO/ClientModelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Hibernate/DAO/ClientModelDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server/Hibernate/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Hibernate/Services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server/MainServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/MainServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server/StartMainServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/StartMainServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server/StartMainServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server/mainServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserModels/Hibernate/DAO/ClientModelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hibernate/DAO/ClientModelDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserModels/Hibernate/HibernateSessionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hibernate/HibernateSessionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserModels/Hibernate/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hibernate/Services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserModels/Hibernate/UseridEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hibernate/UseridEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/UseridEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/UseridEntity.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Client/ClientModel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Client/ControllerClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Client/ControllerClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server/Hibernate/DAO/ClientModelDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Hibernate/DAO/ClientModelDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server/Hibernate/Services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Hibernate/Services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/ControllerServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/ControllerServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server/MainServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/MainServer$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UseridEntity.hbm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/UseridEntity.hbm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -84,7 +84,7 @@
           <entry key="columns_priv" value="1" />
           <entry key="fxml" value="6" />
           <entry key="iml" value="1" />
-          <entry key="java" value="78" />
+          <entry key="java" value="83" />
           <entry key="sql" value="5" />
           <entry key="user" value="1" />
           <entry key="userid" value="12" />
@@ -96,7 +96,7 @@
           <entry key="CLASS" value="3" />
           <entry key="Database Element" value="14" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="78" />
+          <entry key="JAVA" value="83" />
           <entry key="Scratch" value="5" />
           <entry key="XML" value="15" />
         </counts>
@@ -106,16 +106,16 @@
           <entry key="cell" value="39" />
           <entry key="dummy" value="20" />
           <entry key="fxml" value="12" />
-          <entry key="java" value="6459" />
+          <entry key="java" value="6806" />
           <entry key="sql" value="34" />
-          <entry key="txt" value="54" />
+          <entry key="txt" value="101" />
           <entry key="xml" value="72" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6459" />
-          <entry key="PLAIN_TEXT" value="74" />
+          <entry key="JAVA" value="6806" />
+          <entry key="PLAIN_TEXT" value="121" />
           <entry key="SQL" value="34" />
           <entry key="Scratch" value="39" />
           <entry key="XML" value="84" />
@@ -140,17 +140,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Client/MainClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
+            <state relative-caret-position="221">
               <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+              <folding>
+                <element signature="e#1150#1151#0" expanded="true" />
+                <element signature="e#1178#1179#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Server/StartMainServerThread.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Server/mainServerThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="85">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
               <folding>
                 <element signature="e#440#441#0" expanded="true" />
                 <element signature="e#475#476#0" expanded="true" />
@@ -159,38 +163,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Hibernate/Services/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-221">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            <state relative-caret-position="114">
+              <caret line="125" selection-start-line="125" selection-end-line="125" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Server/Hibernate/Services/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/UserModels/ClientModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="e#669#670#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -199,8 +190,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-680">
-              <caret line="112" selection-start-line="112" selection-end-line="112" />
+            <state relative-caret-position="165">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -208,54 +199,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Server/ControllerServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-              <folding>
-                <element signature="e#764#765#0" expanded="true" />
-                <element signature="e#801#802#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/UserModels/ClientStreams.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#276#277#0" expanded="true" />
-                <element signature="e#308#309#0" expanded="true" />
-                <element signature="e#355#356#0" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
-                <element signature="e#467#468#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#563#564#0" expanded="true" />
-                <element signature="e#227#228#0" expanded="true" />
-                <element signature="e#253#254#0" expanded="true" />
-                <element signature="e#303#304#0" expanded="true" />
-                <element signature="e#333#334#0" expanded="true" />
-                <element signature="e#374#375#0" expanded="true" />
-                <element signature="e#400#401#0" expanded="true" />
-                <element signature="e#449#450#0" expanded="true" />
-                <element signature="e#479#480#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Client/ControllerClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2414">
-              <caret line="180" column="5" lean-forward="true" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
+            <state relative-caret-position="238">
+              <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1495#1496#0" expanded="true" />
+                <element signature="e#1555#1556#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -302,15 +254,17 @@
         <option value="$PROJECT_DIR$/src/main/java/Client/ClientModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/StartServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/MainServer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Client/ControllerClient.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sampleServer.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/Client/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/ControllerServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/clientStreams.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/StartMainServerThread.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Server/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/Server/Hibernate/Services/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/Client/MainClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/UserModels/Hibernate/Services/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/StartMainServerThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/mainServerThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Server/Server.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Client/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Client/ControllerClient.java" />
       </list>
     </option>
   </component>
@@ -377,6 +331,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Hibernate" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyChat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="Services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyChat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -411,7 +382,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537781126098" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537797222787" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
@@ -451,7 +422,7 @@
       <module name="MyChat" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="UserModels.Hibernate.DAO.*" />
+          <option name="PATTERN" value="Hibernate.DAO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -479,7 +450,7 @@
       <module name="MyChat" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="UserModels.Hibernate.DAO.*" />
+          <option name="PATTERN" value="Hibernate.DAO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -492,7 +463,7 @@
       <module name="MyChat" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="UserModels.Hibernate.DAO.*" />
+          <option name="PATTERN" value="Hibernate.DAO.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -534,7 +505,7 @@
       <workItem from="1537018864764" duration="46945000" />
       <workItem from="1537192314999" duration="2375000" />
       <workItem from="1537332856795" duration="5020000" />
-      <workItem from="1537367228793" duration="19545000" />
+      <workItem from="1537367228793" duration="29384000" />
     </task>
     <task id="LOCAL-00001" summary="Do  not work serialization">
       <created>1537371250793</created>
@@ -550,11 +521,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537779002476</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactor project. Add UserModels directory">
+      <created>1537781191654</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1537781191654</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104999000" />
+    <option name="totallyTimeSpent" value="114838000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -569,7 +547,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49292928" visible="true" weight="0.11610738" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49292928" visible="true" weight="0.11610738" />
       <window_info id="Structure" order="1" sideWeight="0.5070707" side_tool="true" weight="0.21208054" />
       <window_info id="Persistence" order="2" sideWeight="0.5070707" side_tool="true" weight="0.21208054" />
       <window_info id="Designer" order="3" />
@@ -579,7 +557,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29886687" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29886687" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -611,7 +589,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Do  not work serialization" />
     <MESSAGE value="Add UserStreams" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add UserStreams" />
+    <MESSAGE value="Refactor project. Add UserModels directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor project. Add UserModels directory" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -668,7 +647,7 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2fb031a8-700c-4886-a388-a8e53386e61f/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/Hibernate/HibernateSessionFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Hibernate/HibernateSessionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
@@ -699,14 +678,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/Hibernate/UseridEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Hibernate/UseridEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/Hibernate/DAO/ClientModelDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Hibernate/DAO/ClientModelDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-90">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
@@ -735,16 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Client/ControllerClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2414">
-          <caret line="180" column="5" lean-forward="true" selection-start-line="180" selection-start-column="5" selection-end-line="180" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Server/ControllerServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -767,16 +736,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/MainServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -806,23 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Client/MainClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/Hibernate/Services/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UserModels/ClientModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -834,20 +776,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Client/IsOpen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-680">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="102">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="111" column="19" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2838#2839#0" expanded="true" />
+            <element signature="e#2872#2873#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/StartMainServerThread.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/mainServerThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="85">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding>
             <element signature="e#440#441#0" expanded="true" />
             <element signature="e#475#476#0" expanded="true" />
@@ -855,12 +805,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Server/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/MainServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="23" column="17" lean-forward="true" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+        <state relative-caret-position="374">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Client/MainClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding>
+            <element signature="e#1150#1151#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Hibernate/Services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Client/ControllerClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1495#1496#0" expanded="true" />
+            <element signature="e#1555#1556#0" expanded="true" />
           </folding>
         </state>
       </provider>

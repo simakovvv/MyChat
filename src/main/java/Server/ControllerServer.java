@@ -53,7 +53,7 @@ public class ControllerServer  {
     public void startServer() {
 
 
-        StartMainServerThread startServerThread = new StartMainServerThread();
+        mainServerThread startServerThread = new mainServerThread();
         Thread serverThread = new Thread(startServerThread);
         serverThread.start();
         serverOutput.setVisible(true);

@@ -12,7 +12,7 @@ import java.util.List;
 
 import static Server.MainServer.controllerServer;
 
-public class StartMainServerThread extends Thread  implements Runnable {
+public class mainServerThread extends Thread  implements Runnable {
     private static List<ClientStreams> listOfStream = new ArrayList();
 
     public static List<ClientStreams> getListOfStream() {

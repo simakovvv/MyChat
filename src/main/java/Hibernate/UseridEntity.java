@@ -1,4 +1,4 @@
-package UserModels.Hibernate;
+package Hibernate;
 
 import javax.persistence.*;
 

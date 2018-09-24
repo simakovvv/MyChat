@@ -9,6 +9,8 @@ import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static Client.MainClient.controllerClient;
 
@@ -120,14 +122,17 @@ public class Client extends Thread {
                             if (((ClientModel) msg).getValid() && !((ClientModel) msg).getRegister()) {
                                 controllerClient.getThisUser().setValid(true);
                                 controllerClient.setText("Server " + controllerClient.Time() + "Login successful\n");
+                                controllerClient.setValidationProgress(true);
                             }
                             //В этом на регистрацию
                             if (((ClientModel) msg).getValid() && ((ClientModel) msg).getRegister()) {
                                 controllerClient.getThisUser().setValid(true);
                                 controllerClient.setText("Server " + controllerClient.Time() + "Registration successful\n");
+                                controllerClient.setValidationProgress(true);
                             }
 
                         }
+
                         if (msg instanceof String) {
                             //смотрим, сообщения, если они строковые
                             line = (String) msg;

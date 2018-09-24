@@ -2,7 +2,9 @@ package Client;
 
 
 
+import Hibernate.UseridEntity;
 import UserModels.ClientModel;
+import UserModels.ClientStreams;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -17,10 +19,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class ControllerClient {
 
@@ -59,11 +58,12 @@ public class ControllerClient {
     private Label sysMsg;
     private Label label;
 
+    private boolean validationProgress = false;
 
 
 
 
-
+    //очередь задач
     private Stack clientStack = new Stack();
 
     private List<Tab> tabList = new ArrayList<Tab>();
@@ -72,6 +72,9 @@ public class ControllerClient {
     }
 
 
+    public void setValidationProgress(boolean validationProgress) {
+        this.validationProgress = validationProgress;
+    }
     public ClientModel getThisUser() {
         return thisUser;
     }
@@ -117,6 +120,8 @@ public class ControllerClient {
     @FXML
     private void addNewChatButton(ActionEvent event) {
 
+
+
         //TODO Здесь будет реализация общеня p2p
 
         Tab tab = new Tab();
@@ -129,7 +134,9 @@ public class ControllerClient {
         tabPaneBoard.getTabs().add(tab);
         tabPaneBoard.getSelectionModel().select(tab);
 
-        //createLoginMenu(tab);
+
+
+
 
 
     }
@@ -248,17 +255,17 @@ public class ControllerClient {
             //отправили на проверку профиль, созданный в начале метода
             clientStack.push(thisUser);
 
-            try {
-                Client client = new Client();
-                client.startClient(clientInput);
-                Thread.sleep(3000);
-                if (thisUser.getValid()) {
-                     setDialogExposition();
-                } else {
-                    sysMsg.setText(label.getText().equals("Register as:") ? "Such a user exists" :"User does not exsist .");
-                }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+            Client client = new Client();
+            client.startClient(clientInput);
+
+            while(validationProgress == false){
+                System.out.println("Ждемс");
+            }
+
+            if (thisUser.getValid()) {
+                setDialogExposition();
+            } else {
+                sysMsg.setText(label.getText().equals("Register as:") ? "Such a user exists" :"User does not exsist .");
             }
         }
 

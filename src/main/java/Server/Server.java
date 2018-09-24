@@ -2,12 +2,15 @@ package Server;
 
 
 
+import Hibernate.UseridEntity;
 import UserModels.ClientModel;
-import UserModels.Hibernate.Services.UserService;
+import Hibernate.Services.UserService;
 import UserModels.ClientStreams;
 
 import java.io.*;
 import java.net.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 import static Server.MainServer.controllerServer;
@@ -94,7 +97,7 @@ public class Server extends Thread {
                     }
                     //  Запись имени клиента в массив доступа к клиентам
                     clientStream.setClientName(((ClientModel) msg).getName());
-                    StartMainServerThread.addUser(clientStream);
+                    mainServerThread.addUser(clientStream);
 
 
                     oos.writeObject(msg);
@@ -107,8 +110,6 @@ public class Server extends Thread {
 
                     // System.out.println("Server " + ControllerServer.Time() + " " + " sending back ...\n");
                     controllerServer.setText("Server " + ControllerServer.Time() + " " + " sending back ...\n");
-
-
                     // отсылаем клиенту ту же строку
                     oos.writeObject("Server recieve text: " + line);
                     // Завершаем передачу пакета
@@ -122,6 +123,7 @@ public class Server extends Thread {
                         break;
                     }
                 }
+
 
             }
         } catch (IOException e) {

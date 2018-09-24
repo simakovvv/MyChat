@@ -1,7 +1,7 @@
-package UserModels.Hibernate.Services;
+package Hibernate.Services;
 import UserModels.ClientModel;
-import UserModels.Hibernate.DAO.ClientModelDao;
-import UserModels.Hibernate.UseridEntity ;
+import Hibernate.DAO.ClientModelDao;
+import Hibernate.UseridEntity ;
 
 
 import java.util.List;
