@@ -24,7 +24,7 @@
       <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <Button fx:id="sendButton" contentDisplay="TOP" graphicTextGap="6.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onActionButton" style="-fx-background-color: grey;" text="send" GridPane.columnIndex="1" GridPane.rowIndex="2">
+      <Button fx:id="sendButton" contentDisplay="TOP" graphicTextGap="6.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onActionButton" style="-fx-background-color: grey;" text="send" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
@@ -45,7 +45,7 @@
             </Tab>
          </tabs>
       </TabPane>
-      <TextField fx:id="serverInput" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" onKeyPressed="#textAction" style="-fx-background-color: white;" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+      <TextField fx:id="serverInput" alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" onKeyPressed="#textAction" style="-fx-background-color: white;" visible="false" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
          <GridPane.margin>
             <Insets left="10.0" right="10.0" />
          </GridPane.margin>

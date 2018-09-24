@@ -11,7 +11,8 @@ import javafx.scene.input.KeyEvent;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ControllerServer  {
 
@@ -32,14 +33,13 @@ public class ControllerServer  {
     private Tab serverPageFlag;
 
 
+    List<ClientStreams> clientsStreams = new LinkedList<>();
 
-    public ControllerServer() {
+    public List<ClientStreams> getClientsStreams() {
+        return clientsStreams;
     }
 
-    private Stack serverStack = new Stack();
-
-    public Stack getServerStack(){
-        return serverStack;
+    public ControllerServer() {
     }
 
 
@@ -79,7 +79,7 @@ public class ControllerServer  {
                     + " : " + serverInput.getText() + "\n");
 
 
-            serverStack.push(serverInput.getText());
+
 
         } else {
             serverOutput.appendText("Enter the command\n");

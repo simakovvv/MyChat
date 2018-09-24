@@ -5,13 +5,24 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import static Server.MainServer.controllerServer;
 
 public class StartMainServerThread extends Thread  implements Runnable {
+    private static List<ClientStreams> listOfStream = new ArrayList();
 
-// Этот метод выполняется в параллельном потоке и всё время слушает новые подлючения.
+    public static List<ClientStreams> getListOfStream() {
+        return listOfStream;
+    }
+
+    public static void addUser(ClientStreams clientStream) {
+        listOfStream.add(clientStream);
+        System.out.println(clientStream.toString());
+    }
+
+    // Этот метод выполняется в параллельном потоке и всё время слушает новые подлючения.
 //Если слышит, создаёт поток - демон
     public void run() {
 

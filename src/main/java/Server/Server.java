@@ -21,6 +21,7 @@ public class Server extends Thread {
     private int num;
     //переменная для хранения данных логинящихся пользователей
     private UserService checkUser = new UserService();
+    private ClientStreams clientStream = new ClientStreams();
 
 
 
@@ -36,6 +37,8 @@ public class Server extends Thread {
         this.num = num;
         this.socket = socket;
 
+        // Запись номера клиента в массив доступа к клиентам
+        clientStream.setClientNum(num);
         //Открытие deamon - потока
 
         setDaemon(true);
@@ -44,55 +47,53 @@ public class Server extends Thread {
 
         start();
 
+
     }
 
     public void run(){
         try{
 
 
-            // Входной и выходной потоки для обмена данными с клиентами
-           /* InputStream sin = socket.getInputStream();
-            OutputStream sout = socket.getOutputStream();
-            DataInputStream dis = new DataInputStream(sin);
-            DataOutputStream dos = new DataOutputStream(sout);*/
-
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
 
             ObjectInputStream oin = new ObjectInputStream(socket.getInputStream());
 
+            // Запись клиентских потоков ввода- вывода в массив доступа к клиентам
+            clientStream.setClientStreams(oos,oin);
             String line = null;
 
             Object msg = null;
 
 
             while(true){
-                //line = dis.readUTF();
-                if (!controllerServer.getServerStack().isEmpty()){
 
-                    System.out.println("send msg");
-                    msg = controllerServer.getServerStack().pop();
-                    oos.writeObject(msg);
-                    oos.flush();
-                } else {
                     try {
+
                         msg = oin.readObject();
+
 
                     } catch (ClassNotFoundException e) {
                         e.printStackTrace();
                     }
-                }
+
 
 
                 if(msg instanceof ClientModel){
 
 
+                    // отбор пользователей для авторизации
                     if(checkUser.isRegister((ClientModel) msg) && !((ClientModel) msg).getRegister()){
                         ((ClientModel) msg).setValid(true);
                     }
+                    // отбор пользователей для регистрации
                     if(!checkUser.isRegister((ClientModel) msg) && ((ClientModel) msg).getRegister()){
                         checkUser.saveUser((ClientModel) msg);
                         ((ClientModel) msg).setValid(true);
                     }
+                    //  Запись имени клиента в массив доступа к клиентам
+                    clientStream.setClientName(((ClientModel) msg).getName());
+                    StartMainServerThread.addUser(clientStream);
+
 
                     oos.writeObject(msg);
                     oos.flush();

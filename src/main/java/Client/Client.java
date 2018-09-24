@@ -105,34 +105,40 @@ public class Client extends Thread {
                         msg = controllerClient.getClientStack().pop();
                         oos.writeObject(msg);
                         oos.flush();
-                    }
+
                         try {
+
                             msg = oin.readObject();
+
                         } catch (ClassNotFoundException e) {
                             e.printStackTrace();
                         }
 
-                        if(msg instanceof ClientModel){
+                        if (msg instanceof ClientModel) {
                             // В  этом месте отлавливаем пользователей на авторизацию
-                            if(((ClientModel) msg).getValid() && !((ClientModel) msg).getRegister()){
+                            if (((ClientModel) msg).getValid() && !((ClientModel) msg).getRegister()) {
                                 controllerClient.getThisUser().setValid(true);
-                                controllerClient.setText("Server " + controllerClient.Time() +"Login successful\n");
+                                controllerClient.setText("Server " + controllerClient.Time() + "Login successful\n");
                             }
                             //В этом на регистрацию
-                            if(((ClientModel) msg).getValid() && ((ClientModel) msg).getRegister()){
+                            if (((ClientModel) msg).getValid() && ((ClientModel) msg).getRegister()) {
                                 controllerClient.getThisUser().setValid(true);
-                                controllerClient.setText("Server " + controllerClient.Time() +"Registration successful\n");
+                                controllerClient.setText("Server " + controllerClient.Time() + "Registration successful\n");
                             }
 
                         }
                         if (msg instanceof String) {
                             //смотрим, сообщения, если они строковые
                             line = (String) msg;
-                        out.writeUTF(line);// отсылаем строку серверу
-                        out.flush(); // завершаем поток
-                        line = in.readUTF();// Ждём ответ от сервера
+                            oos.writeObject(line);// отсылаем строку серверу
+                            oos.flush(); // завершаем поток
+                            try {
+                                msg = oin.readObject();// Ждём ответ от сервера
+                            } catch (ClassNotFoundException e) {
+                                e.printStackTrace();
+                            }
 
-                            if (line.endsWith("quit")) {
+                            if (msg.toString().endsWith("quit")) {
                                 Platform.exit();
 
                             } else {
@@ -143,7 +149,7 @@ public class Client extends Thread {
                         }
 
 
-
+                    }
                 }
 
             } catch (UnknownHostException e) {
