@@ -1,4 +1,4 @@
-package Server.Hibernate;
+package UserModels.Hibernate;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;

@@ -1,7 +1,7 @@
-package Server.Hibernate.Services;
-import Client.ClientModel;
-import Server.Hibernate.DAO.ClientModelDao;
-import Server.Hibernate.UseridEntity ;
+package UserModels.Hibernate.Services;
+import UserModels.ClientModel;
+import UserModels.Hibernate.DAO.ClientModelDao;
+import UserModels.Hibernate.UseridEntity ;
 
 
 import java.util.List;
@@ -47,5 +47,7 @@ public class UserService {
     public List<UseridEntity> findAllUsers() {
         return usersDao.findAll();
     }
+
+
  }
 

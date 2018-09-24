@@ -2,8 +2,9 @@ package Server;
 
 
 
-import Client.ClientModel;
-import Server.Hibernate.Services.UserService;
+import UserModels.ClientModel;
+import UserModels.Hibernate.Services.UserService;
+import UserModels.ClientStreams;
 
 import java.io.*;
 import java.net.*;
@@ -19,8 +20,9 @@ public class Server extends Thread {
 
     private Socket socket;
     private int num;
-    //переменная для хранения данных логинящихся пользователей
+    //переменная для сохранения и проверки данных логинящихся пользователей
     private UserService checkUser = new UserService();
+    // Переменная для хранения входных - выходных потоков подключенных клиентов
     private ClientStreams clientStream = new ClientStreams();
 
 

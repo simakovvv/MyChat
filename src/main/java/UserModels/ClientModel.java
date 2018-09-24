@@ -1,4 +1,6 @@
-package Client;
+package UserModels;
+
+import Client.ControllerClient;
 
 import java.io.Serializable;
 

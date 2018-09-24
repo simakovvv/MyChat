@@ -1,10 +1,9 @@
-package Server.Hibernate.DAO;
+package UserModels.Hibernate.DAO;
 
-import Client.ClientModel;
-import Server.Hibernate.UseridEntity;
+import UserModels.Hibernate.UseridEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import Server.Hibernate.HibernateSessionFactory;
+import UserModels.Hibernate.HibernateSessionFactory;
 import java.util.List;
 
 public class ClientModelDao {

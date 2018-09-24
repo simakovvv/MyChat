@@ -13,9 +13,9 @@
     <!-- NOTE that after automapping with IDEA property username and password will delete -->
     <!--and will be:  Initial SessionFactory failedorg.hibernate.service.spi.ServiceException: Unable to create requested service-->
     <!-- NOTE that after automapping with IDEA property username and password will delete -->
-    <mapping class="Client.ClientModel"/>
+    <mapping class="UserModels.ClientModel"/>
     <mapping resource="UseridEntity.hbm.xml"/>
-    <mapping class="Server.Hibernate.UseridEntity"/>
+    <mapping class="UserModels.Hibernate.UseridEntity"/>
 
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hbm2ddl.auto">update</property> -->

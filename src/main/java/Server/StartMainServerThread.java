@@ -1,6 +1,8 @@
 package Server;
 
 
+import UserModels.ClientStreams;
+
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -19,11 +21,11 @@ public class StartMainServerThread extends Thread  implements Runnable {
 
     public static void addUser(ClientStreams clientStream) {
         listOfStream.add(clientStream);
-        System.out.println(clientStream.toString());
+
     }
 
     // Этот метод выполняется в параллельном потоке и всё время слушает новые подлючения.
-//Если слышит, создаёт поток - демон
+    //Если слышит, создаёт поток - демон
     public void run() {
 
         ServerSocket serverSocket = null;

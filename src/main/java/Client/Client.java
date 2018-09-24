@@ -1,6 +1,7 @@
 package Client;
 
 
+import UserModels.ClientModel;
 import javafx.application.Platform;
 import javafx.scene.control.TextField;
 

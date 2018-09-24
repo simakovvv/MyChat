@@ -34,7 +34,7 @@ public class MainClient extends Application {
         primaryStage.setTitle("MyChat");
         primaryStage.setScene(new Scene(root, 364, 428));
 
-        TextField clientInputField = (TextField) root.lookup("#clientInput");
+       // TextField clientInputField = (TextField) root.lookup("#clientInput");
 
         controllerClient.createLoginMenu(controllerClient.clientFlag());
 

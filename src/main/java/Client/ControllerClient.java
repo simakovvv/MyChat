@@ -2,6 +2,7 @@ package Client;
 
 
 
+import UserModels.ClientModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
